@@ -1,0 +1,71 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Sign Up | By Code Info</title>
+        <link rel="stylesheet" href="style1.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <script>
+          function validateForm() {
+              var firstName = document.getElementById('firstName').value;
+              var lastName = document.getElementById('lastName').value;
+              var email = document.getElementById('email').value;
+              var password = document.getElementById('password').value;
+              var confirmPassword = document.getElementById('confirmPassword').value;
+              if (!isValidEmail(email)) {
+                  alert('Please enter a valid email address.');
+                  return;
+              }
+      
+              if (password !== confirmPassword) {
+                  alert("Passwords do not match. Please re-enter your password.");
+                  return;
+              }
+      
+              // Registration successful, you can perform further actions here
+              alert('"Registration successful!successful! Redirecting to the home page.')
+
+              window.location.href = 'shope no.html'
+              }
+              function isValidEmail(email) {
+              // Simple email validation using a regular expression
+              var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return emailRegex.test(email);
+              }
+      </script>
+      
+        <div class="signup-box">
+          <h1>Sign Up</h1>
+          <h4>It's free and only takes a minute</h4>
+          <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+        
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        
+            <label for="confirmPassword">Re-enter Password:</label>
+            <input type="password" id="confirmPassword" required>
+        
+            <input type="button" onclick="validateForm()" value="SUBMIT">
+        </form>
+          <p>
+            By clicking the Sign Up button,you agree to our <br />
+            <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+          </p>
+        </div>
+        <p class="para-2">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </body>
+    </html></span>

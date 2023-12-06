@@ -1,0 +1,57 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Login | By Code Info</title>
+        <link rel="stylesheet" href="style1.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <script>
+            
+function validateLogin() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+
+    if (!isValidEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    // Validate password
+    if (password.length<6) {
+        alert('Please enter a valid password. It should be at least 6 characters long.');
+        return false;
+    }
+
+    // If both email and password are valid, you can proceed with further actions like login.
+    alert('Login successful! Redirecting to the home page.');
+
+    window.location.href = 'shope no.html'
+  }
+function isValidEmail(email) {
+    // Simple email validation using a regular expression
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+        </script>
+        <div class="login-box">
+          <h1>Login</h1>
+        </script>
+        <form id="loginForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <input type="button" onclick="validateLogin()" value="SUBMIT">
+        </form>    
+        </div>
+        <p class="para-2">
+          Not have an account? <a href="Sign up page.html">Sign Up Here</a>
+        </p>
+      </body>
+    </html></span>
